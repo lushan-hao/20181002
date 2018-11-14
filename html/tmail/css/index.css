@@ -20,7 +20,7 @@
   color: #f00;
 }
 
-#nav-left li {
+#nav-left li{
   float: left;
   margin-left: 20px;
 }
@@ -36,15 +36,14 @@
 }
 .jiao{
     border: 1px solid #ccc;
-    border-bottom: none;
+    border-bottom: none;  
 }
 .jiao:hover {
   background-color: #fff;
   border: 1px solid #e5e5e5;
-  border-top: none;
   border-bottom: none;
 }
-.jiao::after {
+#nav-right .jiao::after {
   content: "";
   width: 0;
   border: solid 4px;
@@ -66,4 +65,16 @@
 }
 #nav-right .icon-iconfl {
   font-size: 14px;
+}
+#nav-right .xian{
+  position: relative;
+}
+#nav-right .menu ul{
+  position: absolute;
+  top: 26px;
+  border: 1px solid #e5e5e5;
+  width: 106px;
+  /* right: -27px; */
+  border-top: none;
+  margin: 0 auto;
 }
