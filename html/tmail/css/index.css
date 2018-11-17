@@ -25,23 +25,29 @@
   margin-left: 20px;
 }
 
-#nav-right li {
+#nav-right li{
   float: right;
   padding: 0 14px;
 }
-.jiao:hover::after {
+#nav-right .jiao:hover::after{
   transform-origin: 3px 1.5px;
   transform: rotate(180deg);
-  transition: transform 0.5s linear;
+  transition: transform 0.3s linear;
 }
-.jiao{
-    border: 1px solid #ccc;
-    border-bottom: none;  
-}
-.jiao:hover {
+#nav-right .jiao:hover{
   background-color: #fff;
   border: 1px solid #e5e5e5;
   border-bottom: none;
+}
+.jiao{
+    border: 1px solid #ccc;
+    border-bottom: none;
+}
+.menu > a:hover{
+  text-decoration: underline;
+}
+.jiao ul a:hover{
+  text-decoration: underline;
 }
 #nav-right .jiao::after {
   content: "";
@@ -54,28 +60,65 @@
   transform: none;
 }
 
-.menu {
+.menu{
   position: relative;
 }
-#nav-right .icon-gouwuchekong {
+#nav-right i {
   font-size: 14px;
   color: #f00;
 }
-#nav-right .icon-tel {
-  font-size: 14px;
-}
-#nav-right .icon-iconfl {
-  font-size: 14px;
+#nav-right .shu{
+  background-color: #999;
+  width: 1px;
+  height: 16px;
+  padding: 0;
+  margin: 5px 5px 0;
 }
 #nav-right .xian{
   position: relative;
+}
+#nav-right .xian:hover ul{
+  display: block;
 }
 #nav-right .menu ul{
   position: absolute;
   top: 26px;
   border: 1px solid #e5e5e5;
   width: 106px;
-  /* right: -27px; */
+  left: -1px;
   border-top: none;
   margin: 0 auto;
+  display: none;
+}
+#nav-right .shou{
+  padding-left: 5px;
+}
+#nav-right .shoucang ul{
+  width: 94px;
+}
+#nav-right .menu .qr-code{
+  position: absolute;
+  background-color: #fff;
+  width: 180px;
+  height: 227px;
+  top: 22px;
+  left: -52px;
+  border: 1px solid #e5e5e5;
+  background-image: url(http://img.alicdn.com/tfs/TB1MDxDRpXXXXXUXFXXXXXXXXXX-175-215.png);
+  display: none;
+}
+  #nav-right .shou:hover .qr-code{
+    display: block;
+  }
+#nav-right .shou::after{
+  content: "";
+  position: absolute;
+  top: 12px;
+  left: 38px;
+  border: 5px solid;
+  border-color:transparent transparent #fff transparent; 
+  display: none;
+}
+#nav-right .shou:hover::after{
+  display: block;
 }
