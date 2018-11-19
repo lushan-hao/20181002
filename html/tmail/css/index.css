@@ -226,8 +226,8 @@
 }
 #title ul{
   position: relative;
-  top: 24px;
-  margin-left: 60px;
+  top: 21px;
+  margin-left: 40px;
 }
 #title .title-a{
   width: 200px;
@@ -256,6 +256,7 @@
   float: left;
   margin-left: 10px;
   margin-top: 3px;
+  cursor: pointer;
 }
 
 
@@ -289,37 +290,70 @@
   width: 35px;
 }
 #left i{
-  font-size: 24px;
-  margin: 0 6px;
-  position: absolute;
-}
-#left .icon-tianmaoxingxiang1{
   font-size: 20px;
   margin: 0 8px;
-  top: 40px;
+  position: absolute;
+  cursor: pointer;
+}
+#left .icon-tianmaoxingxiang1{
+  position: relative;
+  font-size: 20px;
+  margin: 0 8px;
+  top: 80px;
+}
+#left .tan{
+  background-color: #333;
+  height: 30px;
+  line-height: 30px;
+  position: absolute;
+  right: 55px;
+  top: 80px;
+  width: 64px;
+  padding: 0 8px;
+  opacity: 0;
+  transition: all .2s linear; 
+}
+#left .tan1:hover .tan{
+  opacity: 1;
+  transform: translateX(20px);
 }
 #left .div1{
   position: absolute;
   width: 20px;
-  width: 0 8px;
-  height: 1px;
+  margin: 0 8px;
+  height: 2px;
   background-color: #fff;
-  top: 80px;
-}
-#left .icon-qian{
-  top: 80px;
-}
-#left .icon-gouwuchekong{
   top: 120px;
 }
-#left .icon-zichan{
+#left .div2{
+  position: absolute;
+  width: 20px;
+  margin: 0 8px;
+  height: 2px;
+  background-color: #fff;
+  top: 230px;
+}
+#left .gou{
+  position: absolute;
   top: 160px;
+  width: 20px;
+  left: 10px;
+}
+#left .icon-qian{
+  top: 240px;
+}
+#left .icon-gouwuchekong{
+  top: 130px;
+  color: #ff0036;
+}
+#left .icon-zichan{
+  top: 280px;
 }
 #left .icon-clock{
-  top: 200px;
+  top: 320px;
 }
 #left .icon-shoucang{
-  top: 240px;
+  top: 360px;
 }
 
 
