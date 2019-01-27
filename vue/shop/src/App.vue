@@ -11,6 +11,7 @@
         <router-link to="/shopcar">购物车</router-link></li>
       <li class="foot-bar-item">
         <router-link to="/car">我的</router-link></li>
+        
     </ul>
   </div>
 </template>
