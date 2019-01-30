@@ -8,6 +8,16 @@ Vue.config.productionTip = false
 import '@/assets/css/reset.css'
 import '@/assets/js/rem.js'
 
+// 按需引入vant
+import { NavBar,Swipe, SwipeItem, Icon} from 'vant';
+
+Vue.use(NavBar).use(Swipe).use(SwipeItem).use(Icon);
+    
+// import Vant from 'vant';
+// import 'vant/lib/index.css';
+// vant 的完全引入
+// Vue.use(Vant);
+
 new Vue({
   router,
   store,

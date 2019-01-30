@@ -1,5 +1,6 @@
 <template>
-    <div>我的</div>
+    <div>我的<div>lubitu</div></div>
+    
 </template>
 
 <script>
