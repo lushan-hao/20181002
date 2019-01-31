@@ -1,6 +1,6 @@
 <template>
   <div>
-    <van-nav-bar title="首页">
+    <van-nav-bar title="首页" class="head">
       <van-icon name="search" slot="left"></van-icon>
       <van-icon name="cart" slot="right"></van-icon>
     </van-nav-bar>
@@ -22,6 +22,9 @@
               <br/> {{item.bytime}}</p>
         </swiper-slide>
       </swiper>
+    </div>
+    <div>
+      
     </div>
   </div>
 </template>
@@ -124,7 +127,15 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.head{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999!important;
+}
 .homeswipe {
+  padding-top: 0.9rem;
   height: 3rem;
   &-index {
     img {
@@ -133,24 +144,34 @@ export default {
     }
   }
 }
-.hot {
+.hot { 
+  height: 50rem;
   &-title {
     font-size: 0.35rem;
     height: 0.4rem;
     line-height: 0.4rem;
     padding-top: 0.2rem;
     text-align: center;
+    padding-bottom: 0.2rem;
   }
   &-price-index {
     width: 2.1rem !important ;
     text-align: center;
     &-title {
       font-size: 0.25rem;
+      font-weight: 600;
+      color: #272727;
     }
     img {
       width: 1.6rem;
       height: 2.2rem;
-      
+    }
+    &-read{
+      font-size: 0.1rem;
+      opacity: 0.5;
+    }
+    &-time{
+      font-size: 0.12rem;
     }
   }
 }
