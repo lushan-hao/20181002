@@ -9,10 +9,9 @@ import '@/assets/css/reset.css'
 import '@/assets/js/rem.js'
 
 // 按需引入vant
-import { NavBar,Swipe, SwipeItem, Icon} from 'vant';
+import { NavBar,Swipe, SwipeItem, Icon, Tabbar, TabbarItem} from 'vant';
 
-Vue.use(NavBar).use(Swipe).use(SwipeItem).use(Icon);
-    
+Vue.use(NavBar).use(Swipe).use(SwipeItem).use(Icon).use(Tabbar).use(TabbarItem);
 // import Vant from 'vant';
 // import 'vant/lib/index.css';
 // vant 的完全引入
