@@ -14,7 +14,7 @@
       <p class="hot-title">热门商品</p>
       <swiper class="hot-price" :options="swiperOption">
         <swiper-slide class="hot-price-index" v-for="(item,index) in bookprice" :key="index">
-          <p class="hot-price-index-title">{{item.title}}</p>
+          
           <!-- <p class="hot-price-index-class">类型{{item.catalog}}</p> -->
           <img :src="item.img" alt>
           <p class="hot-price-index-read">{{item.reading}}</p>
@@ -23,15 +23,21 @@
         </swiper-slide>
       </swiper>
     </div>
-    <div>
-      
+    <div class="recommend">
+        <p class="hot-title">推荐商品</p>
+        <hr/>
+        <ul class="recommend-all">
+          <li v-for="(item,index) in bookprice" :key="index" class="recommend-all-item">
+            <img :src="item.img" alt>
+            <p class="hot-price-index-title">{{item.title}}</p>
+          </li>
+        </ul>
     </div>
   </div>
 </template>
 
 <script>
 import "swiper/dist/css/swiper.css";
-
 import { swiper, swiperSlide } from "vue-awesome-swiper";
 
 export default {
@@ -122,6 +128,9 @@ export default {
   components: {
     swiper,
     swiperSlide
+  },
+  created(){
+
   }
 };
 </script>
@@ -132,7 +141,7 @@ export default {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 999!important;
+  z-index: 999 !important;
 }
 .homeswipe {
   padding-top: 0.9rem;
@@ -144,8 +153,8 @@ export default {
     }
   }
 }
-.hot { 
-  height: 50rem;
+.hot {
+  background-color: #eee;
   &-title {
     font-size: 0.35rem;
     height: 0.4rem;
@@ -174,5 +183,24 @@ export default {
       font-size: 0.12rem;
     }
   }
+}
+.recommend{
+  background-color: #eee;
+  margin-bottom: 1rem;
+  &-all{
+    clear: both;
+    overflow: hidden;
+    &-item{
+      width: 50%;
+      float: left;
+      text-align: center;
+      padding-top: 0.2rem;
+      img{
+        width: 2rem;
+        height: 2.8rem;
+      }
+    }
+  }
+
 }
 </style>
