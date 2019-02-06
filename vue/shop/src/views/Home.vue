@@ -39,6 +39,7 @@
 <script>
 import "swiper/dist/css/swiper.css";
 import { swiper, swiperSlide } from "vue-awesome-swiper";
+import axios from 'axios';
 
 export default {
   data() {
@@ -130,7 +131,9 @@ export default {
     swiperSlide
   },
   created(){
-
+    axios.get('https://bird.ioliu.cn/v2?url=https://api.douban.com/v2/movie/top250').then(res=>{
+      console.log(res);
+    })
   }
 };
 </script>
