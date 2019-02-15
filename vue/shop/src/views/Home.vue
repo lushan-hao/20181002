@@ -131,7 +131,7 @@ export default {
     swiperSlide
   },
   created(){
-    axios.get('https://haoluweb.com').then(res=>{
+    axios.get('https://haoluweb.com/get').then(res=>{
       console.log(res);
     })
   }
