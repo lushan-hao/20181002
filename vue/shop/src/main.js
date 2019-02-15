@@ -7,6 +7,7 @@ Vue.config.productionTip = false
 
 import '@/assets/css/reset.css'
 import '@/assets/js/rem.js'
+// import '@/mock/mock.js'
 
 // 按需引入vant
 import { NavBar,Swipe, SwipeItem, Icon, Tabbar, TabbarItem, Lazyload, Button} from 'vant';

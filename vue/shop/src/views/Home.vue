@@ -131,7 +131,7 @@ export default {
     swiperSlide
   },
   created(){
-    axios.get('https://bird.ioliu.cn/v2?url=https://api.douban.com/v2/movie/top250').then(res=>{
+    axios.get('https://haoluweb.com').then(res=>{
       console.log(res);
     })
   }
