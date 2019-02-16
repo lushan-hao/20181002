@@ -131,9 +131,14 @@ export default {
     swiperSlide
   },
   created(){
-    axios.get('https://haoluweb.com/get').then(res=>{
+    var url1  = 'http://www.weichuang.com/getList';
+    var url2 = 'http://www.weichuang.com/getUser';
+    axios.get(url2).then(res => {
       console.log(res);
-    })
+    });
+    //  axios.get('https://bird.ioliu.cn/v2?url=https://api.douban.com/v2/movie/top250').then(res=>{
+    //     console.log(res);
+    // }); 
   }
 };
 </script>
