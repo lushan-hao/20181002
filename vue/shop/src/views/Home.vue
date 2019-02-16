@@ -27,7 +27,7 @@
         <p class="hot-title">推荐商品</p>
         <hr/>
         <ul class="recommend-all">
-          <li v-for="(item,index) in bookprice" :key="index" class="recommend-all-item">
+          <li v-for="(item,index) in VarietyItem" :key="index" class="recommend-all-item">
             <img :src="item.img" alt>
             <p class="hot-price-index-title">{{item.title}}</p>
           </li>
@@ -40,6 +40,7 @@
 import "swiper/dist/css/swiper.css";
 import { swiper, swiperSlide } from "vue-awesome-swiper";
 import axios from 'axios';
+import url from '@/service.config.js';
 
 export default {
   data() {
@@ -121,6 +122,9 @@ export default {
           bytime: "2013年4月12日"
         }
       ],
+      VarietyItem: [
+
+      ],
       swiperOption: {
           silderPerView:3
       }
@@ -131,14 +135,19 @@ export default {
     swiperSlide
   },
   created(){
-    var url1  = 'http://www.weichuang.com/getList';
-    var url2 = 'http://www.weichuang.com/getUser';
-    axios.get(url2).then(res => {
-      console.log(res);
+    // var url1 = 'http://www.weichuang.com/getList';
+    // var url2 = 'http://www.weichuang.com/getUser';
+    // var url3 = 'http://www.haoluweb.com/regexp';
+    // var url4 = 'http://www.haoluweb.com/list';
+    var url5 = url.getVarietyItem;
+    axios.get(url5).then(res => {
+      // console.log(res.data);
+      this.VarietyItem = res.data;
     });
     //  axios.get('https://bird.ioliu.cn/v2?url=https://api.douban.com/v2/movie/top250').then(res=>{
     //     console.log(res);
     // }); 
+
   }
 };
 </script>
@@ -204,7 +213,7 @@ export default {
       text-align: center;
       padding-top: 0.2rem;
       img{
-        width: 2rem;
+        width: 2.2rem;
         height: 2.8rem;
       }
     }
