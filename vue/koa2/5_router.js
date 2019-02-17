@@ -6,7 +6,7 @@ const router = new Router();
 router.get('/abc', (ctx, next) => {
     console.log(ctx);
     console.log(next);
-    ctx.body = 'weichuang';
+    ctx.body = 'haoluweb';
 });
 
 router.get('/test', (ctx, next) => {
