@@ -1,6 +1,6 @@
 <template>
   <div>
-    <van-tabs v-model="active">
+    <van-tabs>
       <van-tab title="登陆">
         <van-cell-group>
           <van-field label="用户名" required clearable placeholder="请输入用户名" v-model="loginUsername"/>
@@ -43,7 +43,7 @@ import url from "@/service.config.js";
 export default {
   data() {
     return {
-      active: 2,
+      // active: 2,
       loginUsername: "",
       loginPassword: "",
       registUsername: "",
@@ -53,25 +53,23 @@ export default {
   methods: {
     //注册的处理方法
     registHandler() {
-      console.log(url.registUser);
       axios({
         url: url.registUser,
-        methods: "post",
+        method: "post",
         data: {
           userName: this.registUsername,
           password: this.registPassword
         },
       }).then(res => {
           if (res.data.code == 200) {
-            // Toast.success("注册成功");
-            console.log('s');
+            this.$toast.success("注册成功");
+            this.registUsername = this.registPassword = "";
           } else {
-            // Toast.fail("注册失败");
-            console.log(res.data.code);
+            this.$toast.fail("注册失败");
           }
         }).catch(err => {
-          // Toast.fail("注册失败");
-          console.log('e2');
+          console.log(err);
+          this.$toast.fail("注册失败");
         });
     }
   }

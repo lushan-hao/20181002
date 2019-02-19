@@ -2,7 +2,7 @@
 
 
 const mongoose = require('mongoose');
-const db = 'mongodb://localhost/shop';
+const db = 'mongodb://localhost/shop';           //默认27017端口号，如果自定义在localhost后面
 
 
 

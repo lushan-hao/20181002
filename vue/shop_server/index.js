@@ -22,7 +22,7 @@ const Router = require('koa-router');
 let user = require('./controller/user.js');
 
 let router = new Router();
-router.use('/user',user.routes());
+router.use('/user',user.routes());                            // /user跟前端代码里传来的地址后后面的控制器名称有关
 
 
 app.use(router.routes());
