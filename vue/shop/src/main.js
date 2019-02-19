@@ -10,9 +10,9 @@ import '@/assets/js/rem.js'
 import '@/mock/mock.js'
 
 // 按需引入vant
-import { NavBar,Swipe, SwipeItem, Icon, Tabbar, TabbarItem, Lazyload, Button} from 'vant';
+import { NavBar,Swipe, SwipeItem, Icon, Tabbar, TabbarItem, Lazyload, Button, Tab, Tabs, Field, CellGroup} from 'vant';
 
-Vue.use(NavBar).use(Icon).use(Tabbar).use(TabbarItem).use(Lazyload).use(Swipe).use(SwipeItem).use(Button);
+Vue.use(NavBar).use(Icon).use(Tabbar).use(TabbarItem).use(Lazyload).use(Swipe).use(SwipeItem).use(Button).use(Tab).use(Tabs).use(Field).use(CellGroup);
 Vue.use(Lazyload)
 // import Vant from 'vant';
 // import 'vant/lib/index.css';
